@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team youti / loding...</title>
+        <script type = "text/javascript">
+            window.onload = pageLoad;
+             function pageLoad(){
+                noShowPop =getCookieValue();
+                if(noShowPop!= "true"){
+                    window.open("./loding.html","pop","width=700,height=560,history=no,zesizable=no,scrollbars=yes,menubar=no");
+                }
+             }
+             function getCookieValue(){
+                var result="false";
+                if(document.cookie != ""){
+                    cookie = document.cookie.split(";");
+                    for(var i=0; i<cookie.length;i++){
+                        element=cookie[i].split("=");
+                        value=element[0];
+                        value=value.replace(/^%s*/,'');
+                        if(value=="noShowPop"){
+                            result= element[1];
+                        }
+                    }
+                }
+             }
+        </script>
+            <style>
+                button {
+                    width: 120px;
+                    height : 40px;
+                    text-align:center;
+                    background-color: #004fff;
+                    color:#fff;
+                    box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+                    font-size: 16px;
+                    font-weight: bold;
+                    border-radius: 20px;
+                    position: absolute;
+                    left: 40%;
+                    top: 480px;
+                }
+                </style>
+</head>
+<body>
+    <button onclick="alert('팝업을 열겠습니다.'); window.open('./test.html','Pop','width=700,height=560,history=no,zesizable=no,scrollbars=yes,menubar=no'); ">팝업 열기</button>
+</body>
+</html>

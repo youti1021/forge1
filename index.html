@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"> <!--구글 나눔 고딕 연결 코드-->
+    <link rel="stylesheet" href="./css/common.css"> <!-- common.css 연결 선-->
+    <link rel="stylesheet" href="./css/style.css"> <!-- style.css 연결 선-->
+    <title>Document</title>
+    <script type = "text/javascript">
+        window.onload = pageLoad;
+         function pageLoad(){
+            noShowPop =getCookieValue();
+            if(noShowPop!= "true"){
+                window.open("./others file/popup/hello.html","pop","width=700,height=560,history=no,zesizable=no,scrollbars=yes,menubar=no");
+            }
+         }
+         function getCookieValue(){
+            var result="false";
+            if(document.cookie != ""){
+                cookie = document.cookie.split(";");
+                for(var i=0; i<cookie.length;i++){
+                    element=cookie[i].split("=");
+                    value=element[0];
+                    value=value.replace(/^%s*/,'');
+                    if(value=="noShowPop"){
+                        result= element[1];
+                    }
+                }
+            }
+         }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="#">
+                <img id="rogo" src="./picture/rogo.png">
+            </a>
+        </div>
+        <div class="header__gnb">
+            <ul>
+                <li><a href="#">DOWNLOAD</a></li>
+                <li><a href="./others file/other/document.html">DOCUMENT</a></li>
+                <li><a href="#">OFFICE</a></li>
+                <li><a href="./others file/popup/loding/loding-member into.html">MEMBER INTO</a></li>
+                <li><a href="./others file/popup/loding/loding-blog.html">BLOG</a></li>
+                <li><a href="https://youtube.com/@teamyouti"; onclick="window.open('./others file/popup/loding/loding.html','Pop','width=700,height=560,history=no,zesizable=no,scrollbars=no,menubar=no')";>YOUTUBE</a></li>
+                <li><a href="#">SEE OTHERS</a></li>
+            </ul>
+        </div>
+    </header>
+    <footer>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        ⓒ Team Youti Company Corp. All rights reserved.
+    </footer>
+</body>
+</html>

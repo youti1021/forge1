@@ -1,0 +1,46 @@
+img {
+    color : rosybrown;
+}
+.rogo {
+    padding: 9px;
+}
+a {
+    color : black;
+}
+.bloggo {
+    color : #000;
+}
+footer {
+    text-align: end;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    color : black;
+}
+
+.header {
+    height: 180px;
+    text-align: center;
+    background-color: burlywood;
+    box-sizing: border-box;
+    border-bottom: 1px solid #999;
+}
+
+.header__gnb ul {
+    margin-top: 39px;
+}
+
+.header__gnb ul li {
+    display: inline-block;
+}
+
+.header__gnb ul li a {
+    display: block;
+    font : bold 14px 'arial';
+    color : #999;
+    margin: 0px 16px;
+    letter-spacing: 1px;
+}
